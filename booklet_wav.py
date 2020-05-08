@@ -42,7 +42,7 @@ class BookletWav(object):
         # 注释默认按照line读取使用split算法
         # rf = open(self.txt_dir+self.txt_file, 'r')
         # line_list = rf.readlines()
-        ############################
+        ######################
         ## split算法，全部文本每一个标点符号都会区分
         sTxt = SplitTxt(self.txt_dir, self.txt_file)
         line_list = sTxt.split_aline()
