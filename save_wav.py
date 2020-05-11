@@ -28,11 +28,19 @@ class SaveWav(object):
         for aline in self.txt_list:
             iseq=iseq+1
             aline = aline.replace('\n','')
-            wav_txt = tts_tx.tts(aline)
-            if(wav_txt!='error'):
-                file1 = open(self.wav_dir+str(iseq).zfill(5) + ".wav", "wb")  # 写入二进制文件
-                text = base64.b64decode(wav_txt)  # 进行解码
-                file1.write(text)
-                file1.close()  # 写入文件完成后需要关闭文件才能成功写入
+            try:
+                wav_txt = tts_tx.tts(aline)
+                if(wav_txt!='error'):
+                    file1 = open(self.wav_dir+str(iseq).zfill(5) + ".wav", "wb")  # 写入二进制文件
+                    text = base64.b64decode(wav_txt)  # 进行解码
+                    file1.write(text)
+                    file1.close()  # 写入文件完成后需要关闭文件才能成功写入
+            except:
+                wav_txt = tts_tx.tts(aline)
+                if (wav_txt != 'error'):
+                    file1 = open(self.wav_dir + str(iseq).zfill(5) + ".wav", "wb")  # 写入二进制文件
+                    text = base64.b64decode(wav_txt)  # 进行解码
+                    file1.write(text)
+                    file1.close()  # 写入文件完成后需要关闭文件才能成功写入
 
 
