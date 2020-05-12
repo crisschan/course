@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
 
     istep=1
-    while istep<=13:
+    while istep<=2:
         pgo = PageOne(txt_root=TXT_ROOT, txt_file=str(istep),
                       wav_root=WAV_ROOT, img_root=IMG_ROOT,
                       img_file=str(istep)+'.jpg', class_video_root=ONEVIDEO_ROOT)

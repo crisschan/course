@@ -53,9 +53,9 @@ class TTS_TX(object):
                         1050-WeJack，英文男声（新）
                         1051-WeRose，英文女声（新）
             '''
-            params = '{"Text":"' + self.text +\
-                     '","SessionId":"' + str(uuid.uuid1())+ \
-                     '","ModelType":1,"VoiceType":1000}'
+            params = '{"Text":"' + self.text + \
+                     '","SessionId":"' + str(uuid.uuid1()) + \
+                     '","ModelType":1,"VoiceType":1000,"Speed":-0.4}'
 
             self.req.from_json_string(params)
 

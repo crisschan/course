@@ -29,8 +29,8 @@ class PageOne(object):
 
     def get_one(self):
         bl = BookletWav(self.txt_root, self.txt_file, target_dir=self.wav_root)
-        # 生成音频mp3
-        self.wav_root,self.wav_file = bl.to_audio()
+        # 生成音频mp3种
+        self.mp3_root,self.mp3_file = bl.to_mp3()
 
 
         time_duration = librosa.get_duration(filename=self.mp3_root+self.mp3_file)
