@@ -7,6 +7,7 @@
 import librosa
 import moviepy.editor as mpe
 
+
 class Audio4Video(object):
     def __init__(self, video_root, video_file, audio_root, audio_file):
         '''
@@ -25,9 +26,33 @@ class Audio4Video(object):
     def __combine_audio(self, outvideo_root, outvideo_file):
         my_clip = mpe.VideoFileClip(self.video_root+self.video_file)
         audio_background = mpe.AudioFileClip(self.audio_root+self.audio_file)
-        n_frames = my_clip.reader.nframes
+        # 获取时长
+        audio_time = audio_background.duration
+        video_time = my_clip.duration
+        print(audio_time,video_time)
+
+        if video_time > audio_time:
+            my_clip = my_clip.subclip(0, audio_time)
+
+
+        n_frames = 9#my_clip.reader.nframes
         final_clip = my_clip.set_audio(audio_background)
-        final_clip.write_videofile(outvideo_root+outvideo_file, fps=n_frames, audio_codec="aac")
+        #final_clip = final_clip.subclip(0, final_clip.duration - 1)
+
+        #final_clip.write_videofile(outvideo_root+outvideo_file, fps=n_frames, audio_codec="aac")
+        final_clip.write_videofile(outvideo_root + outvideo_file,
+                                   codec='libx264',
+                                   audio_codec='aac',
+                                   temp_audiofile='temp-audio.m4a',
+                                   remove_temp=True
+                                   )
+        '''
+        video_with_new_audio.write_videofile("mp4_with_audio.mp4",
+                                             codec='libx264',
+                                             audio_codec='aac',
+                                             temp_audiofile='temp-audio.m4a',
+                                             remove_temp=True
+                                             )'''
 
 
     def combin(self, outvideo_root, outvideo_file):
