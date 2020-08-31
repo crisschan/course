@@ -1,0 +1,5 @@
+moviepy==1.0.2
+tencentcloud_sdk_python==3.0.167
+pydub==0.23.1
+librosa==0.7.2
+opencv_python==4.2.0.34
