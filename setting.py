@@ -5,22 +5,21 @@
 # @Site    : https://blog.csdn.net/crisschan
 # @File    : setting.py
 # 全部配置都在这里
-
+## ppt位置
+PPT_ROOT=r'F:\PySpace\course\ppt\class1.pptx'
 ## 文本目录，按照和图片同名并且按照1、2、3 的方式存储，无扩展名
-TXT_ROOT = './origin/txt/'
+TXT_ROOT = r'F:\PySpace\course\origin\txt'
 ## 图片目录，按照1，2，3方式存储，jpg扩展名，同ppt里的页的顺序编号
-IMG_ROOT = './origin/img/'
+IMG_ROOT = r'F:\PySpace\course\origin\img'
 
 ## 一个ppt是一节课，那么合并一节课的视频，就是一个
-CLASSVIDEO_ROOT = './classvideo/'
+CLASSVIDEO_ROOT = r'F:\PySpace\course\classvideo'
 ## 同txt文件的音频文件
-WAV_ROOT = './tmp/wav/'
+WAV_ROOT = r'F:\PySpace\course\tmp\wav'
 ## 存放一些临时文件or过程中文件
-TMP_ROOT = './tmp/tmp/'
+TMP_ROOT = r'F:\PySpace\course\tmp\tmp'
 ## 生成的每一个图片+文本的音频的 小视频
-ONEVIDEO_ROOT = './tmp/onevideo/'
-
-## 腾讯云的tts的secretId, secretKey
+ONEVIDEO_ROOT = r'F:\PySpace\course\tmp\onevideo'
 
 SECRETID=''
 SECRETKEY=''
