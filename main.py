@@ -12,9 +12,31 @@ import os
 if __name__ == '__main__':
 
     Remover.dir_under('./tmp')
-    os.mkdir(ONEVIDEO_ROOT)
-    os.mkdir(WAV_ROOT)
-    os.mkdir(TMP_ROOT)
+    try:
+        os.mkdir(ONEVIDEO_ROOT)
+    except:
+        print(ONEVIDEO_ROOT+'已经存在')
+    try:
+        os.mkdir(WAV_ROOT)
+    except:
+        print(WAV_ROOT + '已经存在')
+    try:
+        os.mkdir(TMP_ROOT)
+    except:
+        print(TMP_ROOT + '已经存在')
+    try:
+        os.mkdir(ONEVIDEO_ROOT)
+    except:
+        print(ONEVIDEO_ROOT + '已经存在')
+    try:
+        os.mkdir(TMP_ROOT)
+    except:
+        print(TMP_ROOT + '已经存在')
+    try:
+        os.mkdir(CLASSVIDEO_ROOT)
+    except:
+        print(CLASSVIDEO_ROOT + '已经存在')
+
     istep=1
     while istep<=11:
         pgo = PageOne(txt_root=TXT_ROOT, txt_file=str(istep),

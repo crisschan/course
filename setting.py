@@ -22,5 +22,5 @@ ONEVIDEO_ROOT = './tmp/onevideo/'
 
 ## 腾讯云的tts的secretId, secretKey
 
-SECRETID=''
-SECRETKEY=''
+SECRETID='AKIDXpslPnL7vlKeiYtXjvrX5QHsFMYYFm1c'
+SECRETKEY='bGgqSu3wb093ieLuMZWEgsrbFeq54oIZ'
