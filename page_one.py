@@ -25,7 +25,7 @@ class PageOne(object):
         self.wav_root = wav_root
         self.img_root=img_root
         self.img_file=img_file
-        self.class_video_root=class_video_root
+        self.class_video_root=ONEVIDEO_ROOT
 
     def get_one(self):
         bl = BookletWav(self.txt_root, self.txt_file, target_dir=self.wav_root)
@@ -41,4 +41,4 @@ class PageOne(object):
         ## 在合并多个视频的时候出现了1和10排序在一起，这可能是因为使用了sort()函数的时候排序是按照字符串顺序排序的，因此这里我想通过
         ## {:0>4d}.format(int(self.img_file))方式格式化onevideo文件名为0001这种格式
         ## 但是我觉得这里做个事约束对后续影响由点到，这一个想法暂时暂停，寻求在class_video里面解决sort问题
-        a4v.combin( self.class_video_root, os.path.splitext(self.img_file)[0]+'.mp4')
+        a4v.combin( self.class_video_root+'\\', os.path.splitext(self.img_file)[0]+'.mp4')

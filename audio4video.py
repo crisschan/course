@@ -4,7 +4,7 @@
 # @Author  : CrissChan
 # @Site    : https://blog.csdn.net/crisschan
 # @File    : audio_video.py
-import librosa
+
 import moviepy.editor as mpe
 
 

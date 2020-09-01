@@ -44,7 +44,8 @@ class Img2Video(object):
             videoWriter.release()
         else:
             im_name=self.img_file
-            frame = cv2.imread(self.img_root + im_name)
+            self.img_root=self.img_root.replace('\\','/')
+            frame = cv2.imread( self.img_root +'/'+ im_name)
             frame = cv2.resize(frame, size)  # 注意这里resize大小要和视频的一样
             videoWriter.write(frame)
             videoWriter.release()

@@ -35,12 +35,12 @@ class BookletWav(object):
         return:生成的wav文件的全路径
         '''
 
-        if not os.path.exists(self.target_dir + self.txt_file):
-            os.mkdir(self.target_dir + self.txt_file)
+        if not os.path.exists(self.target_dir +'\\'+ self.txt_file):
+            os.mkdir(self.target_dir + '\\'+self.txt_file)
 
-        target_dir = self.target_dir + self.txt_file + '/'
+        target_dir = self.target_dir + '\\'+self.txt_file + '\\'
         # 注释默认按照line读取使用split算法
-        rf = open(self.txt_dir+self.txt_file, 'r')
+        rf = open(self.txt_dir+'\\'+self.txt_file, 'r',encoding='utf-8')
         line_list = rf.readlines()
         ######################
         ## split算法，全部文本每一个标点符号都会区分
@@ -64,13 +64,12 @@ class BookletWav(object):
         '''
 
         self.to_wav()
-        if not os.path.exists(self.target_dir + self.txt_file):
-            os.mkdir(self.target_dir + self.txt_file)
-        target_dir = self.target_dir + self.txt_file + '/'
-        AudioSegment.from_wav(target_dir + self.txt_file + '.wav').export(target_dir + self.txt_file + '.mp3',
-                                                                          format='mp3')
+        if not os.path.exists(self.target_dir  + '\\'+ self.txt_file):
+            os.mkdir(self.target_dir  + '\\'+ self.txt_file)
+        target_dir = self.target_dir + '\\'+self.txt_file + '\\'
+        # AudioSegment.from_wav(target_dir  + '\\'+self.txt_file + '.wav').export(target_dir  + '\\'+ self.txt_file + '.mp3', format='mp3')
 
-        return (target_dir , self.txt_file + '.mp3')
+        return (target_dir , self.txt_file + '.wav')
 
     def __clear_temp(self, file_list):
 
