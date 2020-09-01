@@ -20,7 +20,7 @@ class TTS_TX(object):
     https://cloud.tencent.com/document/product/1073/34093
     '''
     def __init__(self):
-        cred = credential.Credential("AKIDXpslPnL7vlKeiYtXjvrX5QHsFMYYFm1c", "bGgqSu3wb093ieLuMZWEgsrbFeq54oIZ")
+        cred = credential.Credential("AKIDXpslPnL7vlKeiYtXjvrX5QHsFMYYF", "qSu3wb093ieLuMZWEgsrbFeq54oIZ")
         httpProfile = HttpProfile()
         httpProfile.endpoint = "tts.tencentcloudapi.com"
 
