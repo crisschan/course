@@ -19,3 +19,8 @@ WAV_ROOT = './tmp/wav/'
 TMP_ROOT = './tmp/tmp/'
 ## 生成的每一个图片+文本的音频的 小视频
 ONEVIDEO_ROOT = './tmp/onevideo/'
+
+## 腾讯云的tts的secretId, secretKey
+
+SECRETID=''
+SECRETKEY=''

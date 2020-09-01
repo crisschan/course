@@ -12,6 +12,7 @@ from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentClo
 from tencentcloud.tts.v20190823 import tts_client, models
 import uuid
 import json
+from setting import *
 class TTS_TX(object):
     '''
     语音合成免费额度为每月100万字符，相当于一本《西游记》的字数。每月1日重置免费额度。
@@ -20,7 +21,7 @@ class TTS_TX(object):
     https://cloud.tencent.com/document/product/1073/34093
     '''
     def __init__(self):
-        cred = credential.Credential("AKIDXpslPnL7vlKeiYtXjvrX5QHsFMYYF", "qSu3wb093ieLuMZWEgsrbFeq54oIZ")
+        cred = credential.Credential(SECRETID, SECRETKEY)
         httpProfile = HttpProfile()
         httpProfile.endpoint = "tts.tencentcloudapi.com"
 
