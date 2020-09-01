@@ -21,5 +21,5 @@ TMP_ROOT = r'F:\PySpace\course\tmp\tmp'
 ## 生成的每一个图片+文本的音频的 小视频
 ONEVIDEO_ROOT = r'F:\PySpace\course\tmp\onevideo'
 
-SECRETID=''
-SECRETKEY=''
+SECRETID='AKIDXpslPnL7vlKeiYtXjvrX5QHsFMYYFm1c'
+SECRETKEY='bGgqSu3wb093ieLuMZWEgsrbFeq54oIZ'
